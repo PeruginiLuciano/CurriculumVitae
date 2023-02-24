@@ -3,15 +3,15 @@ from colorama import Fore, init
 import os
 import time
 import keyboard
-#import pygame
-#import threading
-#pygame.init()
-#pygame.mixer.init()
-#sonido= pygame.mixer.Sound("sonido.mp3")
-#def suenaMusica():
- #   pygame.mixer.Sound.play(sonido)
+import pygame
+import threading
+pygame.init()
+pygame.mixer.init()
+sonido= pygame.mixer.Sound("sonido.mp3")
+def suenaMusica():
+    pygame.mixer.Sound.play(sonido)
 
-#hilo = threading.Thread(target=suenaMusica)
+hilo = threading.Thread(target=suenaMusica)
 
 
 init()
@@ -184,7 +184,7 @@ def Bonus():
     print("\nDisfruta de Konki bailando\n\n")
     time.sleep(5)
     
-    #hilo.start()
+    hilo.start()
     while True:
         
         if keyboard.is_pressed ('enter'):
